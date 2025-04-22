@@ -1,7 +1,7 @@
 const managementlist = document.getElementById('managementlist');
 
 export function fetchmanagement() {
-    fetch('http://localhost:3000/api/management')
+    fetch('https://dh-ganderbal-backend.onrender.com/api/management')
         .then(res => res.json())
         .then(data => rendermanagement(data))
         .catch(err => {
@@ -20,7 +20,7 @@ function rendermanagement(data) {
         div.style.marginTop = '10px';
         div.className = 'management-entry';
         div.innerHTML = `
-        <img src="http://localhost:3000${entry.imagePath}" class="passport" alt="Image" />
+        <img src="https://dh-ganderbal-backend.onrender.com${entry.imagePath}" class="passport" alt="Image" />
         <div class="left_alignment">
             <p><strong>${entry.name}</p></strong>
             <p><strong>${entry.education}</p></strong>

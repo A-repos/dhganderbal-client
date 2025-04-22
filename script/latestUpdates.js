@@ -1,7 +1,7 @@
 const latestUpdatelist = document.getElementById('eventList'); // Match the ID of the container
 
 export function fetchlatestUpdates() {
-    fetch('http://localhost:3000/api/latest-updates')
+    fetch('https://dh-ganderbal-backend.onrender.com/api/latest-updates')
         .then(res => res.json())
         .then(data => renderlatestUpdatelist(data))
         .catch(err => {
@@ -38,7 +38,7 @@ function renderlatestUpdatelist(data) {
         // Add the title and link to the entry
         div.innerHTML = `
             <p>
-                <a href="http://localhost:3000${entry.filepath}" style="text-decoration:none; color:${linkColor} ;" download>
+                <a href="https://dh-ganderbal-backend.onrender.com${entry.filepath}" style="text-decoration:none; color:${linkColor} ;" download>
                     ${entry.title}
                 </a>
             </p>

@@ -1,7 +1,7 @@
 const opdList = document.getElementById('opdScheduleList');
 
 export function fetchOPDSchedule() {
-    fetch('http://localhost:3000/api/opd')
+    fetch('https://dh-ganderbal-backend.onrender.com/api/opd')
         .then(res => res.json())
         .then(data => renderOPDSchedule(data))
         .catch(err => {
