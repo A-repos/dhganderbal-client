@@ -1,3 +1,5 @@
+//Before moving to Firebase
+
 import { openModal, closeModal, initModalCloseOnOutsideClick } from './modal.js';
 import { fetchlatestUpdates } from './latestUpdates.js';
 
