@@ -3,7 +3,11 @@ const managementlist = document.getElementById('managementlist');
 export function fetchmanagement() {
     fetch('https://dh-ganderbal-backend.onrender.com/api/management')
         .then(res => res.json())
-        .then(data => rendermanagement(data))
+        .then(data => {
+            managementlist.innerHTML = '';
+            rendermanagement(data);
+        })
+
         .catch(err => {
             console.error("Failed to load Latest Updates data", err);
             alert("Failed to load Latest Updates schedule.");
@@ -11,7 +15,6 @@ export function fetchmanagement() {
 }
 
 function rendermanagement(data) {
-    managementlist.innerHTML = '';
     data.forEach(entry => {
         const div = document.createElement('div');
         div.className = 'data-entry';
