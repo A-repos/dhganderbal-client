@@ -16,6 +16,7 @@ export function fetchmanagement() {
 
 function rendermanagement(data) {
     data.forEach(entry => {
+        console.log("Image URL:", entry.imageUrl);
         const div = document.createElement('div');
         div.className = 'data-entry';
         div.style.display = 'flex';
