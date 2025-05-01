@@ -22,7 +22,7 @@ function renderawardsCertificates(data) {
         div.style.marginTop = '10px';
         div.className = 'awardscertificate-entry';
         div.innerHTML = `
-        <img src="https://dh-ganderbal-backend.onrender.com${entry.imagePath}" class="big-size" alt="Image" />
+        <img src="https://dh-ganderbal-backend.onrender.com${entry.imageUrl}" class="big-size" alt="Image" />
             <p class="text-decoration">${entry.description}</p>
         </div>
         `;
