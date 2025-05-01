@@ -24,7 +24,7 @@ function renderlatestUpdatelist(data) {
     data.forEach(entry => {
         const div = document.createElement('div');
         div.className = 'event-item left_alignment'; // Ensure this class matches your CSS for event items
-        const match = entry.filepath.match(/pdf-(\d{8})T/); // extract `20250415` part
+        const match = entry.PDFfileUrl.match(/pdf-(\d{8})T/); // extract `20250415` part
         let isRecent = false;
         if (match) {
             const dateStr = match[1]; // e.g., '20250415'
@@ -38,7 +38,7 @@ function renderlatestUpdatelist(data) {
         // Add the title and link to the entry
         div.innerHTML = `
             <p>
-                <a href="https://dh-ganderbal-backend.onrender.com${entry.filepath}" style="text-decoration:none; color:${linkColor} ;" download>
+                <a href="https://dh-ganderbal-backend.onrender.com${entry.PDFfileUrl}" style="text-decoration:none; color:${linkColor} ;" download>
                     ${entry.title}
                 </a>
             </p>
