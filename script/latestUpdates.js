@@ -38,7 +38,7 @@ function renderlatestUpdatelist(data) {
         // Add the title and link to the entry
         div.innerHTML = `
             <p>
-                <a href="https://dh-ganderbal-backend.onrender.com${entry.PDFfileUrl}" style="text-decoration:none; color:${linkColor} ;" download>
+                <a href="${entry.PDFfileUrl}" style="text-decoration:none; color:${linkColor} ;" download>
                     ${entry.title}
                 </a>
             </p>
